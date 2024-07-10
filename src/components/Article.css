@@ -1,0 +1,48 @@
+.article_appartement{
+max-width: 80vw;
+border-radius:25px ;
+background-color: #F6F6F6;
+padding: 0 2rem 0;
+margin:20px  auto;
+box-shadow: 0px 4px 4px 0px #00000040;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.article_appartement .appartement{
+display: grid;
+align-items: end;
+background-image: linear-gradient(to top, #863535,#ff6060);
+border-radius: 25px;
+padding: 1rem;
+justify-content: space-between;
+gap: 16px;
+margin: 16px;
+flex-basis: 25%;
+min-height: 200px;
+min-width: 200px;
+}
+.titreLocation{
+max-width: 50%;
+margin-block-end: 8px;
+margin-inline-start: 8px;
+color: #ffffff;
+font-size: 14px;
+}
+@media (max-width:776px){
+.article_appartement{
+justify-content: center;
+background-color: #ffffff;
+flex-basis: 100%;
+padding: 0 5px 0;
+box-shadow: none;
+margin-top: 30px;
+}
+.article_appartement .appartement{
+height: 20vh;
+flex-basis: 100%;
+padding: 0;
+margin: 10px 0 10px 0;
+}
+}
