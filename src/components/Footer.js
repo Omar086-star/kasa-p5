@@ -1,6 +1,6 @@
 import React from 'react'
-import LogoNoir from "../logoNoir d'écran.png";
-import './Footer.css'
+import LogoNoir from "../images/logoNoir d'écran.png";
+import './styles.scss'
 export default function Footer() {
   return (
     <div className='Footer'>

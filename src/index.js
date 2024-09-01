@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
+import App from './App.js';
+import Flat from './components/pajes/Flat/Flat.js'; 
 import { createBrowserRouter, RouterProvider , Outlet } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.js';
+import Footer from './components/Footer.js';
+import About from './components/pajes/About/About.js';
+import Errors from './components/pajes/Errors/Errors.js';
+
+// import { Link } from 'react-router-dom';
 
 const HeaderFooterLayout = () => {
   return (
@@ -20,31 +25,37 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HeaderFooterLayout />,
-    errorElement: <h1>404 not found</h1>,
+  
     children: [
+      {
+        path: '/Errors',
+        element: <Errors />
+      },
       {
         path: '/',
         element: <App />
       },
       {
-        path: '/Flat',
-        element: <h1>Propos</h1>
+        path:"/flat/:id" ,
+        element:<Flat />
       },
       {
         path: '/About',
-        element: <h1>Propos</h1>
+        element: <About/>
       }
     ]
   }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+document.body.classList.add('loading'); // Ajouter la classe "loading" au body
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
+  () => {
+    document.body.classList.remove('loading'); // Retirer la classe "loading" après le rendu
+  }
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

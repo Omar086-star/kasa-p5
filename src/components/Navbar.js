@@ -1,6 +1,6 @@
 import React from 'react';
-import "./Navbar.css";
-import logo from "../logo 2024-07-04 092822.png";
+import "./styles.scss";
+import logo from "../images/logo 2024-07-04 092822.png";
 import { Link } from 'react-router-dom';
  function Navpar() {
   return ( 
