@@ -1,0 +1,86 @@
+// Variables
+$transition-duration: 0.5s;
+$control-bg-color: rgba(0, 0, 0, 0.5);
+$control-padding: 10px;
+$counter-color: #534a4aaf;
+$counter-font-size: 18px;
+$carousel-img-max-height: 415px;
+
+// Mixins
+@mixin center-horizontal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-vertical {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Carousel Styles
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+
+  .carousel-inner {
+    display: flex;
+    transition: transform $transition-duration ease-in-out;
+  }
+
+  .carousel-item {
+    width: 100%;
+    transition: opacity $transition-duration ease;
+    opacity: 0;
+    display: none; // Hide all items initially
+
+    &.active {
+      display: block; // Show the active item
+      opacity: 1;
+      text-align: center;
+    }
+  }
+
+  .carousel-img {
+    margin: 5px auto;
+    max-height: $carousel-img-max-height;
+    display: block;
+    max-width: 95%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    @include center-vertical;
+    background-color: $control-bg-color;
+    border: none;
+    padding: $control-padding;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 45px;
+  }
+
+  .carousel-control-next {
+    right: 45px;
+  }
+
+  // Counter
+  .carousel-counter {
+    position: absolute;
+    bottom: 5%;
+    @include center-horizontal;
+    
+    .conteurImage {
+      font-size: $counter-font-size;
+      color: $counter-color;
+    }
+  }
+}

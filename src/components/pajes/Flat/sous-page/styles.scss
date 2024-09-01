@@ -1,0 +1,261 @@
+// Variables
+$primary-color: #ff6060;
+$secondary-color: #c4c4c4;
+$text-color: #ffffff;
+$font-size-large: 36px;
+$font-size-medium: 18px;
+$font-size-small: 14px;
+$font-size-xsmall: 10px;
+$badge-size-large: 64px;
+$badge-size-small: 32px;
+$padding-standard: 2rem;
+$border-radius: 25px;
+$gap-small: 10px;
+
+// Flat Page Container
+.Flat_page {
+  max-width: 90%;
+  margin: 0 auto 30px;
+}
+
+// Image Section
+.Flat_image {
+  max-width: 100%;
+  padding: 0 $padding-standard;
+  margin: 10px auto;
+  position: relative;
+  
+  .ImgFlat {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Bas Page Section
+.bas_page {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+  padding: 0 $padding-standard;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: start;
+
+  .subtitle {
+    font-size: $font-size-large;
+    font-weight: 500;
+    color: $primary-color;
+    margin-top: 0;
+  }
+
+  .Paris {
+    font-size: $font-size-medium;
+    font-weight: 400;
+  }
+
+  .paragraphs {
+    gap: $gap-small;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      background-color: $primary-color;
+      color: $text-color;
+      font-size: $font-size-small;
+      text-align: center;
+      border-radius: $border-radius;
+      padding: 0.3em 0.2em;
+      width: 60px;
+      margin: 5px;
+    }
+  }
+}
+
+// Bas Page 2 Section
+.bas_page2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+
+  .personne {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .badge {
+      width: $badge-size-large;
+      height: $badge-size-large;
+      border-radius: 50%;
+      background-color: $secondary-color;
+    }
+
+    .Alexandre {
+      width: 95px;
+      padding-right: 5px;
+      color: $primary-color;
+      font-size: $font-size-medium;
+      font-weight: 500;
+    }
+  }
+
+  .icons_avis {
+    margin: 35px 0 0 0;
+    justify-content: end;
+    display: flex;
+
+    .avis {
+      color: $primary-color;
+      font-size: 24px;
+
+      &.moins {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+// Responsive Styling
+@media (max-width: 776px) {
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .ImgFlat {
+    width: 100%;
+    height: 255px;
+  }
+
+  .paragraphs p {
+    font-size: $font-size-xsmall;
+    padding: 0.3em 0.5em;
+  }
+
+  .bas_page {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bas_page2 {
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+
+    .Alexandre {
+      padding-right: 10px;
+      font-size: 12px;
+      text-align: end;
+      width: 65px;
+    }
+
+    .icons_avis {
+      margin-right: 30px;
+      margin-top: 15px;
+    }
+
+    .avis {
+      font-size: 18px;
+    }
+
+    .badge {
+      width: $badge-size-small;
+      height: $badge-size-small;
+    }
+  }
+
+  .zone-description {
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+
+    .zone1,
+    .zone2 {
+      width: 100%;
+      margin: 10px auto;
+    }
+  }
+}
+
+// Variables
+$primary-color: #ff6060;
+$secondary-color: #dedddda5;
+$text-color: white;
+
+// Mixin for border-radius
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+}
+
+// Zone Description
+.zone-description {
+  max-width: 100%;
+  margin: 15px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 776px) {
+    max-width: 90%;
+  }
+
+  .zone1,
+  .zone2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+
+    &:first-child {
+      margin-right: 20px;
+
+      @media (max-width: 776px) {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      margin-left: 20px;
+
+      @media (max-width: 776px) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// Title Section
+.tit1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  @include rounded-corners(15px);
+  align-items: center;
+
+  .description_title1 {
+    font-size: 18px;
+    color: $text-color;
+    padding-left: 5px;
+  }
+
+  .iconDES,
+  .iconDES2 {
+    color: $text-color;
+    font-size: 18px;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+// Paragraph Section
+.paragraph_description1 {
+  background-color: $secondary-color;
+  color: $primary-color;
+  @include rounded-corners(15px);
+  text-align: start;
+}
+

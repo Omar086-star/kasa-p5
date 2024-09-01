@@ -1,0 +1,100 @@
+// Variables
+$primary-color: #ff6060;
+$secondary-color: #ffffff;
+$font-weight-bold: 700;
+$font-size-desktop: 24px;
+$font-size-mobile: 13px;
+$banner-height-desktop: 140px;
+$banner-height-mobile: 100px;
+$box-height-desktop: 52px;
+$box-height-mobile: 30px;
+$banner-padding-desktop: 0 2rem;
+$banner-padding-mobile: 0 5px;
+$box-padding: 10px 20px 10px 15px;
+
+// Banner styles
+.banner2 {
+  max-width: 80vw;
+  min-height: $banner-height-desktop;
+  padding: $banner-padding-desktop;
+  background-image: url("../../../images/source2-image.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border-radius: 25px;
+  display: grid;
+  place-items: center;
+  color: $secondary-color;
+  font-weight: $font-weight-bold;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 25px;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.697);
+  }
+}
+
+// Box container styles
+.boxDeServices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10px auto;
+}
+
+// Individual box styles
+.box {
+  background-color: $primary-color;
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: $box-padding;
+  height: $box-height-desktop;
+}
+
+// Subtitle styles
+.subTitleServices {
+  color: $secondary-color;
+  font-size: $font-size-desktop;
+  font-weight: $font-weight-bold;
+  padding-left: 5px;
+}
+
+// Icon styles
+.iconDES {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+}
+
+// Responsive styles
+@media (max-width: 776px) {
+  // Banner adjustments
+  .banner2 {
+    min-height: $banner-height-mobile;
+    padding: $banner-padding-mobile;
+  }
+
+  // Box adjustments
+  .box {
+    height: $box-height-mobile;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  // Subtitle adjustments
+  .subTitleServices {
+    font-size: $font-size-mobile;
+    padding: 5px;
+    margin: 5px auto;
+  }
+}

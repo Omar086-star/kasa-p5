@@ -1,0 +1,23 @@
+.pajeError{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .error404{
+    color: #ff6060;
+    font-size: 288px;
+    font-weight: 700;
+  }
+  .paragraphError{
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff6060;
+  }
+  .retornPage{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+  }
