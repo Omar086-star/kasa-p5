@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df59cd04.css",
+    "main.js": "/static/js/main.1cab876a.js",
+    "static/media/source2-image.png": "/static/media/source2-image.ae96da0b4eb5a8e1a7df.png",
+    "static/media/sourc-image.png": "/static/media/sourc-image.5ef1995c9e24711a7148.png",
+    "static/media/annonce1440.png": "/static/media/annonce1440.69c5962386c8f695ca10.png",
+    "static/media/logo 2024-07-04 092822.png": "/static/media/logo 2024-07-04 092822.b8c90faae8c7c948bbca.png",
+    "index.html": "/index.html",
+    "main.df59cd04.css.map": "/static/css/main.df59cd04.css.map",
+    "main.1cab876a.js.map": "/static/js/main.1cab876a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df59cd04.css",
+    "static/js/main.1cab876a.js"
+  ]
+}
