@@ -20,4 +20,25 @@
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
+  }
+.brLigne{
+  display: none;
+}
+
+  @media (max-width:776px) {
+    .error404{
+      font-size: 86px;
+    }
+    .paragraphError{
+      font-size: 18px;
+
+    }
+    .retornPage{
+      font-size: 14px;
+
+    }
+    .brLigne{
+      display: block;
+    }
   }
