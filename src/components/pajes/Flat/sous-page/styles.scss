@@ -36,8 +36,8 @@ $gap-small: 10px;
   display: flex;
   justify-content: space-between;
   flex-basis: 50%;
-  padding: 0 $padding-standard;
-  margin-top: 0;
+  padding: 0 ;
+  margin-top: 20px;
   margin-bottom: 0;
   align-items: start;
 
@@ -54,10 +54,9 @@ $gap-small: 10px;
   }
 
   .paragraphs {
-    gap: $gap-small;
-    width: 100%;
+     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: unset;
     align-items: center;
 
     p {
@@ -66,9 +65,10 @@ $gap-small: 10px;
       font-size: $font-size-small;
       text-align: center;
       border-radius: $border-radius;
-      padding: 0.3em 0.2em;
-      width: 60px;
+      padding:  0.2em;
+      width: 115px;
       margin: 5px;
+      height: 25px;
     }
   }
 }
@@ -234,6 +234,7 @@ $text-color: white;
   background-color: $primary-color;
   @include rounded-corners(15px);
   align-items: center;
+  border-radius: 5px;
 
   .description_title1 {
     font-size: 18px;
@@ -253,9 +254,10 @@ $text-color: white;
 
 // Paragraph Section
 .paragraph_description1 {
-  background-color: $secondary-color;
+  background-color:#F6F6F673;
   color: $primary-color;
   @include rounded-corners(15px);
   text-align: start;
+  border-radius: 0 0 25px 25px;
 }
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Carousel.scss';
+import Right from '../images/lef.png';
+import Left from '../images/le.png';
 
 const Carousel = ({ pictures = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,6 +24,9 @@ const Carousel = ({ pictures = [] }) => {
     showSlide(currentIndex - 1);
   };
 
+  // Si une seule image, pas de contrôles ni de compteur
+  const isSingleImage = pictures.length === 1;
+
   return (
     <div id="carouselExample" className="carousel">
       <div className="carousel-inner">
@@ -34,16 +39,23 @@ const Carousel = ({ pictures = [] }) => {
           </div>
         ))}
       </div>
-      <button className="carousel-control-prev" onClick={prevSlide}>
-        &#10094;
-      </button>
-      {/* Displaying the current image number and the total number of images */}
-      <div className="carousel-counter">
-        <span className='conteurImage'>{currentIndex + 1} / {pictures.length}</span>
-      </div>
-      <button className="carousel-control-next" onClick={nextSlide}>
-        &#10095;
-      </button>
+
+      {/* Affichage des boutons et du compteur uniquement si plus d'une image */}
+      {!isSingleImage && (
+        <>
+          <button className="carousel-control-prev" onClick={prevSlide}>
+            <img src={Right} alt="Left Arrow" className="carousel-arrow-left" />
+          </button>
+
+          <div className="carousel-counter">
+            <span className='conteurImage'>{currentIndex + 1} / {pictures.length}</span>
+          </div>
+
+          <button className="carousel-control-next" onClick={nextSlide}>
+            <img src={ Left} alt="Right Arrow" className="carousel-arrow-right" />
+          </button>
+        </>
+      )}
     </div>
   );
 };

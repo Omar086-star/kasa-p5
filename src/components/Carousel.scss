@@ -1,8 +1,8 @@
 // Variables
 $transition-duration: 0.5s;
-$control-bg-color: rgba(0, 0, 0, 0.5);
+$control-bg-color: rgba(0, 0, 0, 0);
 $control-padding: 10px;
-$counter-color: #534a4aaf;
+$counter-color: #fefafaaf;
 $counter-font-size: 18px;
 $carousel-img-max-height: 415px;
 
@@ -33,8 +33,7 @@ $carousel-img-max-height: 415px;
   .carousel-item {
     width: 100%;
     transition: opacity $transition-duration ease;
-    opacity: 0;
-    display: none; // Hide all items initially
+     display: none; // Hide all items initially
 
     &.active {
       display: block; // Show the active item
@@ -47,29 +46,39 @@ $carousel-img-max-height: 415px;
     margin: 5px auto;
     max-height: $carousel-img-max-height;
     display: block;
-    max-width: 95%;
+    width: 100%;
+    object-fit: cover;
   }
-
   .carousel-control-prev,
-  .carousel-control-next {
+  .carousel-control-next
+   {
     position: absolute;
     @include center-vertical;
-    background-color: $control-bg-color;
     border: none;
+    background-color: none;
     padding: $control-padding;
+    width: 0; /* Adjust as necessary */
+    height: 0;
+    background: transparent; /* Adjust as necessary */
     cursor: pointer;
 
     &:focus {
       outline: none;
     }
-  }
 
+  }
+.carousel-control-next{
+  right: 65px;
+
+}
   .carousel-control-prev {
-    left: 45px;
+    left: 20px;
   }
 
-  .carousel-control-next {
-    right: 45px;
+  .carousel-arrow-right,
+  .carousel-arrow-left{
+    width: 46px;
+    height: 79px;
   }
 
   // Counter
@@ -82,5 +91,6 @@ $carousel-img-max-height: 415px;
       font-size: $counter-font-size;
       color: $counter-color;
     }
+  
   }
 }
