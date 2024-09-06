@@ -94,3 +94,22 @@ $carousel-img-max-height: 415px;
   
   }
 }
+
+@media (max-width:776px) {
+  .carousel-arrow-right,
+  .carousel-arrow-left{
+    width: 11px !important;
+    height: 19px !important;
+  }
+
+  .carousel-control-next{
+    right: 10px !important;
+  
+  }
+    .carousel-control-prev {
+      left: 0 !important;
+    }
+    .conteurImage{
+      display: none !important;
+    }
+}

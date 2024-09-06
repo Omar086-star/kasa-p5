@@ -65,7 +65,7 @@ $gap-small: 10px;
       font-size: $font-size-small;
       text-align: center;
       border-radius: $border-radius;
-      padding:  0.2em;
+      padding: 0.2em;
       width: 115px;
       margin: 5px;
       height: 25px;
@@ -120,17 +120,20 @@ $gap-small: 10px;
 // Responsive Styling
 @media (max-width: 776px) {
   .subtitle {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .ImgFlat {
     width: 100%;
     height: 255px;
   }
-
+.Paris{
+  font-size: 14px  !important;
+}
   .paragraphs p {
-    font-size: $font-size-xsmall;
-    padding: 0.3em 0.5em;
+    font-size: 10px !important;
+    max-width: 60px !important;
+    border-radius: 5px !important;
   }
 
   .bas_page {
@@ -139,15 +142,15 @@ $gap-small: 10px;
   }
 
   .bas_page2 {
-    justify-content: space-evenly;
+    justify-content: space-evenly !important;
     flex-direction: row-reverse;
-    gap: 15px;
+    gap: 85px !important;
     align-items: center;
     width: 100%;
 
     .Alexandre {
       padding-right: 10px;
-      font-size: 12px;
+      font-size: 12px !important;
       text-align: end;
       width: 65px;
     }
@@ -158,12 +161,12 @@ $gap-small: 10px;
     }
 
     .avis {
-      font-size: 18px;
+      font-size: 18px !important;
     }
 
     .badge {
-      width: $badge-size-small;
-      height: $badge-size-small;
+      width:32px !important;
+      height: 32px !important;
     }
   }
 
@@ -172,7 +175,7 @@ $gap-small: 10px;
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
-
+font-size: 12px !important;
     .zone1,
     .zone2 {
       width: 100%;
@@ -200,7 +203,7 @@ $text-color: white;
   justify-content: space-between;
 
   @media (max-width: 776px) {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .zone1,
@@ -237,7 +240,7 @@ $text-color: white;
   border-radius: 5px;
 
   .description_title1 {
-    font-size: 18px;
+    font-size: 13px;
     color: $text-color;
     padding-left: 5px;
   }
@@ -254,10 +257,9 @@ $text-color: white;
 
 // Paragraph Section
 .paragraph_description1 {
-  background-color:#F6F6F673;
+  background-color: #f6f6f673;
   color: $primary-color;
   @include rounded-corners(15px);
-  text-align: start;
+  text-align: left;
   border-radius: 0 0 25px 25px;
 }
-
