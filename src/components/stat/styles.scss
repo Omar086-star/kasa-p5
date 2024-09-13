@@ -1,0 +1,215 @@
+// Variables
+$primary-color: #ff6060;
+$secondary-color: #ffffff;
+$logo-width-desktop: 210px;
+$logo-height-desktop: 68px;
+$logo-width-mobile: 145px;
+$logo-height-mobile: 46px;
+$font-size-desktop: 24px;
+$font-size-mobile: 12px;
+$navbar-padding: 15px;
+$footer-bg-color: black;
+$footer-text-color: white;
+$footer-padding: 2rem;
+$footer-height: 209px;
+$footer-logo-width: 122px;
+
+// Navbar styles
+.navbar {
+  max-width: 90%;
+  margin: 15px auto 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .logoImage {
+    width: $logo-width-desktop;
+    height: $logo-height-desktop;
+    margin-left: auto;
+  }
+
+  .navbar_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: initial;
+
+    .Accueil, .propos {
+      padding-inline: $navbar-padding;
+      font-size: $font-size-desktop;
+    }
+  }
+}
+
+// Footer styles
+.Footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: $footer-padding;
+  margin: 10px auto;
+  max-width: 100%;
+  height: $footer-height;
+
+  .FooterImage {
+    .logoImageNoir {
+      width: $footer-logo-width;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .FooterText {
+    color: $footer-text-color;
+    font-size: $font-size-desktop;
+  }
+}
+
+// Responsive styles
+@media (max-width: 776px) {
+  // Navbar
+  .navbar {
+    .logoImage {
+      width: $logo-width-mobile;
+      height: $logo-height-mobile;
+    }
+
+    .navbar_logo {
+      .Accueil, .propos {
+        padding-inline: 10px;
+        font-size: $font-size-mobile;
+      }
+    }
+  }
+
+  // Footer
+  .Footer {
+    padding: 0;
+
+    .FooterText {
+      font-size: $font-size-mobile;
+      width: 30%;
+    }
+  }
+}
+// Variables
+$transition-duration: 0.5s;
+$control-bg-color: rgba(0, 0, 0, 0);
+$control-padding: 10px;
+$counter-color: #fefafaaf;
+$counter-font-size: 18px;
+$carousel-img-max-height: 415px;
+
+// Mixins
+@mixin center-horizontal {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-vertical {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Carousel Styles
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+
+  .carousel-inner {
+    display: flex;
+    transition: transform $transition-duration ease-in-out;
+  }
+
+  .carousel-item {
+    width: 100%;
+    transition: opacity $transition-duration ease;
+     display: none; // Hide all items initially
+
+    &.active {
+      display: block; // Show the active item
+      opacity: 1;
+      text-align: center;
+    }
+  }
+
+  .carousel-img {
+    margin: 5px auto;
+    max-height: $carousel-img-max-height;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next
+   {
+    position: absolute;
+    @include center-vertical;
+    border: none;
+    background-color: none;
+    padding: $control-padding;
+    width: 0; /* Adjust as necessary */
+    height: 0;
+    background: transparent; /* Adjust as necessary */
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+.carousel-control-next{
+  right: 65px;
+
+}
+  .carousel-control-prev {
+    left: 20px;
+  }
+
+  .carousel-arrow-right,
+  .carousel-arrow-left{
+    width: 46px;
+    height: 79px;
+  }
+
+  // Counter
+  .carousel-counter {
+    position: absolute;
+    bottom: 5%;
+    @include center-horizontal;
+    
+    .conteurImage {
+      font-size: $counter-font-size;
+      color: $counter-color;
+    }
+  
+  }
+}
+
+@media (max-width:776px) {
+  .carousel-arrow-right,
+  .carousel-arrow-left{
+    width: 11px !important;
+    height: 19px !important;
+  }
+
+  .carousel-control-next{
+    right: 10px !important;
+  
+  }
+    .carousel-control-prev {
+      left: 0 !important;
+    }
+    .conteurImage{
+      display: none !important;
+    }
+}

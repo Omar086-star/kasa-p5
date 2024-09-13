@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./sous-page/styles.scss";
-import Carousel from "../../carousel.js";
+import Carousel from "../../stat/carousel.js";
 import SoFlatimage from "./sous-page/soFlatimage.js";
 import Discription from './sous-page/discriptionAnnonce.js';
 import { useParams } from 'react-router-dom';
