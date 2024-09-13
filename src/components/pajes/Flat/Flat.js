@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./Flat.css";
+import "./sous-page/styles.scss";
 import Carousel from "../../carousel.js";
 import SoFlatimage from "./sous-page/soFlatimage.js";
 import Discription from './sous-page/discriptionAnnonce.js';

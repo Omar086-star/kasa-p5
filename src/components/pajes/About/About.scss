@@ -4,8 +4,8 @@ $secondary-color: #ffffff;
 $font-weight-bold: 700;
 $font-size-desktop: 24px;
 $font-size-mobile: 13px;
-$banner-height-desktop: 140px;
-$banner-height-mobile: 100px;
+$banner-height-desktop: 223px;
+$banner-height-mobile: 111px;
 $box-height-desktop: 52px;
 $box-height-mobile: 30px;
 $banner-padding-desktop: 0 2rem;
@@ -14,7 +14,7 @@ $box-padding: 10px 20px 10px 15px;
 
 // Banner styles
 .banner2 {
-  max-width: 80vw;
+  max-width: 85%;
   min-height: $banner-height-desktop;
   padding: $banner-padding-desktop;
   background-image: url("../../../images/source2-image.png");
@@ -45,15 +45,15 @@ $box-padding: 10px 20px 10px 15px;
 .boxDeServices {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin: 10px auto;
+  gap: 20px;
+  margin: 25px auto;
 }
 
 // Individual box styles
 .box {
   background-color: $primary-color;
-  width: 80%;
-  margin: 15px auto;
+  width: 72%;
+  margin: 10px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,8 +72,9 @@ $box-padding: 10px 20px 10px 15px;
 
 // Icon styles
 .iconDES {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: $font-weight-bold;
+  margin: 5px;
 }
 
 // Responsive styles
@@ -82,6 +83,8 @@ $box-padding: 10px 20px 10px 15px;
   .banner2 {
     min-height: $banner-height-mobile;
     padding: $banner-padding-mobile;
+    border-radius: 10px;
+
   }
 
   // Box adjustments
@@ -89,12 +92,13 @@ $box-padding: 10px 20px 10px 15px;
     height: $box-height-mobile;
     padding: 0;
     margin: 0 auto;
+    width: 80%;
   }
 
   // Subtitle adjustments
   .subTitleServices {
     font-size: $font-size-mobile;
     padding: 5px;
-    margin: 5px auto;
+    margin: 5px ;
   }
 }

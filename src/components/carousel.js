@@ -3,6 +3,7 @@ import './Carousel.scss';
 import Right from '../images/lef.png';
 import Left from '../images/le.png';
 
+
 const Carousel = ({ pictures = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
