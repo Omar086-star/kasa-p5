@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App.js';
-import Flat from './components/pajes/Flat/Flat.js'; 
+import Flat from "./Pages/Flats/Flat.js"; 
 import { createBrowserRouter, RouterProvider , Outlet } from 'react-router-dom';
-import Navbar from './components/stat/Navbar.js';
-import Footer from './components/stat/Footer.js';
-import About from './components/pajes/About/About.js';
-import Errors from './components/pajes/Errors/Errors.js';
+import Navbar from './components/Navbar.js';
+import Footer from './components/Footer.js';
+import About from './Pages/About/About.js';
+import Errors from './Pages/Errors/Errors.js';
 
 // import { Link } from 'react-router-dom';
 

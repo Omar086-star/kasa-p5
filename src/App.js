@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Banner from "./components/pajes/home/Banner.js";
 import "./index.scss";
-import Home from "./components/pajes/home/Home.js";
+import Home from "./Pages/home/Home.js";
 
 function App() {
     
@@ -22,7 +21,6 @@ function App() {
 
     if (!stylesLoaded) {
         return <div>
-        <Banner />
         <Home />
     </div>; 
         
