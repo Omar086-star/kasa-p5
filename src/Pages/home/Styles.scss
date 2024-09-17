@@ -31,6 +31,7 @@ $overlay-color: rgba(0, 0, 0, 0.697);
     .banner {
       min-height: 111px !important;
       padding: 0 5px;
+      border-radius: 10px !important;
       
       .titreBanner {
         font-size: 24px;
@@ -162,7 +163,7 @@ $overlay-color: rgba(0, 0, 0, 0.697);
   @media (max-width: 776px) {
     .banner {
       min-height: 111px !important;
-      padding: 0 5px;
+      padding: 0 15px !important;
       
       .titreBanner {
         font-size: 24px;

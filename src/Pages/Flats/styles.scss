@@ -281,7 +281,6 @@ body {
   justify-content: space-between;
   gap: 55px;
   width: 100%;
-
   margin: 10px auto;
 }
 @media (max-width:776px) {
@@ -290,7 +289,7 @@ body {
     gap: 10px;
   } 
   .description-section , .equipments-section{
-    width: 0%;
+    width: 100% !important;
   }
 }
 .description-section , .equipments-section{

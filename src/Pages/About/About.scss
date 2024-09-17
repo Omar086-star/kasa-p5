@@ -52,8 +52,8 @@ $box-padding: 10px 20px 10px 15px;
 
 // Individual box styles
 .boxDeServices {
-  width: 72%;
-  margin: 10px auto 0;
+  width: 78%;
+  margin: 0px auto 0;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
@@ -88,6 +88,9 @@ $box-padding: 10px 20px 10px 15px;
     border-radius: 10px;
 
   }
+  .about {
+      margin: 15px auto !important;
+   }
 
   // Box adjustments
   .box {
@@ -95,6 +98,10 @@ $box-padding: 10px 20px 10px 15px;
     padding: 0;
     margin: 0 auto;
     width: 80%;
+  }
+  .boxDeServices {
+    width: 90%;
+padding: 0;
   }
 
   // Subtitle adjustments
