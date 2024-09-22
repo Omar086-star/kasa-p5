@@ -56,6 +56,6 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>,
   () => {
-    document.body.classList.remove('loading'); // Retirer la classe "loading" après le rendu
+    document.body.classList.remove('loading');
   }
 );

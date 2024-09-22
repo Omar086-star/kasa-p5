@@ -1,4 +1,3 @@
-
 import React from 'react';
 import "./styles.scss";
 import Donnes from"../data/db.json";

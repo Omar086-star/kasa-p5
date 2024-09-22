@@ -27,3 +27,5 @@ export default function SoFlatimage({ title, location, host, tags, rating }) {
     </div>
   );
 }
+
+
