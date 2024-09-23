@@ -13,11 +13,11 @@ import { Link } from 'react-router-dom';
 </Link>
        <div className="navbar_logo">
        <Link to={'/'}>
-       <div className='Accueil'>Accueil</div>
+       <div className='Accueil'>ACCUEIL</div>
 
        </Link>
         <Link to={'/About'}>
-        <div className='propos'>A propos</div>
+        <div className='propos'>A PROPOS</div>
         </Link>
        </div>
     </nav>
